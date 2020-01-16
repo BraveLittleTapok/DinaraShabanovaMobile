@@ -6,12 +6,15 @@ import setup.DriverSetup;
 import setup.PropertiesValue;
 import setup.TestPeoperties;
 
+import java.io.File;
+
 public class BaseTest extends DriverSetup {
     private static TestPeoperties prop = new TestPeoperties();
 
     @BeforeGroups(groups = "native")
     public void setUpNative() throws Exception {
-        PropertiesValue.AUT = prop.getPropertyByName("aut");
+        String path = new File(prop.getPropertyByName("aut")).getAbsolutePath();
+        PropertiesValue.AUT = path;
         PropertiesValue.SUT = null;
         driver = null;
         prepareDriver();
