@@ -4,8 +4,8 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
-public class TestPeoperties {
-    private static final String PATH_TO_PROPERTIES = "src/main/resources/test.properties";
+public class TestProperties {
+    public static String PATH_TO_PROPERTIES;
     Properties currentProps = new Properties();
 
     Properties getCurrentProps() throws IOException {

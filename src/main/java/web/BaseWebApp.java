@@ -20,6 +20,4 @@ public class BaseWebApp {
        driver.get(text);
     }
 
-
-
 }

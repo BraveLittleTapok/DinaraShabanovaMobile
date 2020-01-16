@@ -3,13 +3,9 @@ package scenarios;
 import org.testng.annotations.Test;
 import setup.PropertiesValue;
 import steps.NativeSteps;
-import steps.WebSteps;
 
-public class TestHw2 extends BaseTest {
-
-    private static final String textForSearch = "EPAM";
+public class TestNative extends SettingsBeforeTest {
     private static final String title = "BudgetActivity";
-
     @Test(groups = "native", description = "Test for native app")
     public void NativeAppTest() {
         NativeSteps step = new NativeSteps(driver);
@@ -23,14 +19,7 @@ public class TestHw2 extends BaseTest {
         step.fillPasswordOnTheMainPage(PropertiesValue.PASSWORD);
         step.clickSignIn();
         step.pageShouldBe(title);
-    }
-
-    @Test(groups = "web", description = "Test for Web search")
-    public void WebTest() {
-        WebSteps steps = new WebSteps(driver);
-        steps.openGoogleSearch();
-        steps.performSearchWithText(textForSearch);
-        steps.resultShouldContainsSeveralItems();
+        step.closeDriver();
     }
 
 }

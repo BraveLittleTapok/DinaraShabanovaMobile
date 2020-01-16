@@ -1,14 +1,13 @@
-
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Web">
-
     <test name="Web Test">
+        <groups>
+            <run>
+                <include name="web"/>
+            </run>
+        </groups>
         <classes>
-            <class name="scenarios.TestHw2">
-                <methods>
-                    <include name="WebTest"/>
-                </methods>
-            </class>
+            <class name="scenarios.TestWeb"></class>
         </classes>
     </test>
 </suite>

@@ -60,4 +60,8 @@ public class NativeSteps extends DriverSetup {
     public void pageShouldBe(String title) {
         assertEquals(activity.getTitle(), title);
     }
+
+    public void closeDriver() {
+        driver.quit();
+    }
 }

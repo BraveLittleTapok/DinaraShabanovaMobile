@@ -27,7 +27,7 @@ public class WebSteps {
         searchPage.performSearchWithText(text);
     }
 
-    public void resultShouldContainsSeveralItems() {
-        assertTrue(!searchPage.getListOfResults().isEmpty());
+    public void resultShouldContainsSeveralItems() throws InterruptedException {
+        assertTrue((searchPage.getListOfResults().size() != 0));
     }
 }
