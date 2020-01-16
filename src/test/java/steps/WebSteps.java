@@ -30,4 +30,8 @@ public class WebSteps {
     public void resultShouldContainsSeveralItems() throws InterruptedException {
         assertTrue((searchPage.getListOfResults().size() != 0));
     }
+
+    public void closeDriver() {
+        driver.quit();
+    }
 }

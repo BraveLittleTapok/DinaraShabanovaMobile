@@ -12,6 +12,7 @@ public class TestWeb extends SettingsBeforeTest {
         steps.openGoogleSearch();
         steps.performSearchWithText(textForSearch);
         steps.resultShouldContainsSeveralItems();
+        steps.closeDriver();
     }
 
 }
