@@ -41,11 +41,11 @@ public class DriverSetup {
             desiredCapabilities.setCapability("keepDevice", true);
             MobileApi
                     .with()
-                    .path(String.format("device/%s", "HT79W1A05739"))
+                    .path(String.format("device/%s", UDID))
                     .callApi(System.getenv("TOKEN")).prettyPeek();
             MobileApi
                     .with()
-                    .path(String.format("storage/install/%s", "HT79W1A05739"))
+                    .path(String.format("storage/install/%s", UDID))
                     .contentType(ContentType.ANY)
                     .multipart(app)
                     .callApi(System.getenv("TOKEN")).prettyPeek();
